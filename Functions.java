@@ -230,4 +230,21 @@ public class Functions{
       }
    }
 
+      //EXAMPLE 5: Queue Demo
+ 
+   public static void QueueDemo() {
+ 
+      System.out.println("\nQUEUE EXAMPLE");    
+      ArrayList<String> nameList = new ArrayList<>(Arrays.asList("Bugs","Wiley","Yosemite","Mickey","Charlie"));
+
+      //create the queue
+
+      //add the names to the queue
+
+      //serve the first 2 people in the queue
+
+      //print the next person in line 
+  
+
+
 }
