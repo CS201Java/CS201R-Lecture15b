@@ -13,11 +13,14 @@ public class Main {
         Functions.LinkedListAddRemove(input);        
         
         //EXAMPLE 3: Demonstrate LinkedList Using Class Sample
-        Functions.LinkedListDemo();      
-
+        //Functions.LinkedListDemo();      
                 
         //EXAMPLE 4: Print a List in Reverse
         //Functions.StackDemo();  
+
+
+        //EXAMPLE 5: Queue Demo
+        //Functions.QueueDemo();  
     }
 }
 

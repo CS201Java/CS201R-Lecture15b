@@ -23,7 +23,7 @@ public class Functions{
 
       long start = System.nanoTime();
       myInts.clear();
-      for (i = 0; i < numElem; ++i) {
+      for (i = 0; i < numOps; ++i) {
          myInts.add(0);
       }
       long end = System.nanoTime();
@@ -34,7 +34,7 @@ public class Functions{
 
       System.out.print("  Writing to each element............");
       start = System.nanoTime();
-      for (i = 0; i < numElem; ++i) {
+      for (i = 0; i < numOps; ++i) {
          myInts.set(i, 111); // Any value
       }
       end = System.nanoTime();
@@ -96,8 +96,8 @@ public class Functions{
 
       long start = System.nanoTime();
 
-      for (i = 0; i < numElem; ++i) {
-         myInts.addLast(0);
+      for (i = 0; i < numOps; ++i) {
+         myInts.addLast(110);
       }
       long end = System.nanoTime();
       long timeNano = end - start;
@@ -107,7 +107,7 @@ public class Functions{
 
       System.out.print("  Writing to each element............");
       start = System.nanoTime();
-      for (i = 0; i < numElem; ++i) {
+      for (i = 0; i < numOps; ++i) {
          myInts.set(i, 111); // Any value
       }
       end = System.nanoTime();
@@ -191,7 +191,7 @@ public class Functions{
    public static void StackDemo() {
  
       System.out.println("\nSTACK EXAMPLES: REVERSE LIST");    
-      MyStack<String> myStack = new MyStack<String>();  
+      MyStack<String> myStack = new MyStack<>();  
     
       ArrayList<String> nameList = new ArrayList<>(Arrays.asList("Bugs","Wiley","Yosemite","Mickey","Charlie"));
 
@@ -238,13 +238,21 @@ public class Functions{
       ArrayList<String> nameList = new ArrayList<>(Arrays.asList("Bugs","Wiley","Yosemite","Mickey","Charlie"));
 
       //create the queue
+      MyQueue<String> qList = new MyQueue<>();
 
       //add the names to the queue
+      for (String s : nameList){
+         qList.enqueue(s);
+      }
 
       //serve the first 2 people in the queue
+      System.out.println("next served: " + qList.dequeue());
+      System.out.println("next served: " + qList.dequeue());
 
       //print the next person in line 
-  
+            System.out.println("next in line: " + qList.peek());
 
+  
+   }
 
 }
